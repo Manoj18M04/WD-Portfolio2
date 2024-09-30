@@ -77,6 +77,9 @@ import canva from '../assets/svg/skills/canva.svg'
 import node from '../assets/svg/skills/node.svg'
 import pandas from '../assets/svg/skills/pandas.svg'
 import postman from '../assets/svg/skills/postman.svg'
+import streamlit from '../assets/svg/skills/streamlit.svg'
+import matplotlib from '../assets/svg/skills/matplotlib.svg'
+import seaborn from '../assets/svg/skills/seaborn-icon.svg'
 
 export const skillsImage = (skill) => {
     const skillID = skill.toLowerCase();
@@ -239,6 +242,12 @@ export const skillsImage = (skill) => {
             return powerbi;
         case 'postman':
             return postman;
+        case 'streamlit':
+            return streamlit;
+            case 'matplotlib':
+                return matplotlib;
+            case 'seaborn':
+                return seaborn;
         default:
             break;
     }

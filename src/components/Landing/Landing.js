@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { Button } from '@material-ui/core';
-import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { makeStyles } from '@material-ui/core/styles';
+
+import MultiTextTypewriterComponent from './Typing/TypewriterComponent';
 
 import './Landing.css';
 import { ThemeContext } from '../../contexts/ThemeContext';
@@ -132,8 +133,9 @@ function Landing() {
                         className='lcr--content'
                         style={{ color: theme.tertiary }}
                     >
-                        <h6>{headerData.title}</h6>
                         <h1>{headerData.name}</h1>
+                        {/* <MultiTextTypewriterComponent/> */}
+                        <h6><span>{headerData.title}</span></h6>
                         <p>{headerData.desciption}</p>
 
                         <div className='lcr-buttonContainer'>

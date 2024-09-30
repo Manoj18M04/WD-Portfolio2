@@ -9,17 +9,20 @@
     'PostgreSQL',
     'Python',
     'Java',
-    'PowerBI',
-    'Figma',
     'Numpy',
     'Pandas',
+    'Matplotlib',
+    'Seaborn',
     'Scikit-learn',
     'Tensorflow',
     'PyTorch',
+    'Streamlit',
     'OpenCV',
+    'PowerBI',
+    'Figma',
     'Git',
     'Postman',
-    'Docker'
+    'Docker',
 ]
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.
