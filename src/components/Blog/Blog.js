@@ -49,7 +49,7 @@ function Blog() {
                     </div>
                     <div className="blog--body">
                         <div className="blog--bodyContainer">
-                            {blogData.slice(0, 3).map(blog => (
+                            {blogData.slice(0, 3).reverse().map(blog => (
                                 <SingleBlog 
                                     theme={theme}
                                     title={blog.title}

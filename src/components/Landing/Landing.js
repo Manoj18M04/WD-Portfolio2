@@ -2,8 +2,6 @@ import React, { useContext } from 'react';
 import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-import MultiTextTypewriterComponent from './Typing/TypewriterComponent';
-
 import './Landing.css';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { headerData } from '../../data/headerData';
@@ -15,6 +13,9 @@ import {
     FaKaggle,
     
 } from 'react-icons/fa';
+
+import {TextLoop, Span} from './TypingStyles'
+import TypewriterComponent from 'typewriter-effect';
 
 function Landing() {
     const { theme, drawerOpen } = useContext(ThemeContext);
@@ -134,8 +135,20 @@ function Landing() {
                         style={{ color: theme.tertiary }}
                     >
                         <h1>{headerData.name}</h1>
-                        {/* <MultiTextTypewriterComponent/> */}
-                        <h6><span>{headerData.title}</span></h6>
+                        <TextLoop>
+                            I am  
+                            <Span>
+                                <TypewriterComponent
+                                    options={{
+                                    strings: headerData.title, // Array of titles
+                                    autoStart: true,
+                                    loop: true,
+                                    deleteSpeed: 50, // Optional: control speed of deletion
+                                    delay: 75, // Optional: control speed of typing
+                                    }}
+                                />
+                            </Span>
+                        </TextLoop>
                         <p>{headerData.desciption}</p>
 
                         <div className='lcr-buttonContainer'>
@@ -150,16 +163,6 @@ function Landing() {
                                     </Button>
                                 </a>
                             )}
-                            {/* <NavLink
-                                to='/#contacts'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
-                                <Button className={classes.contactBtn}>
-                                    Contact
-                                </Button>
-                            </NavLink> */}
                         </div>
                     </div>
                 </div>
