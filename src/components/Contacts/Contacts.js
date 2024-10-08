@@ -1,18 +1,15 @@
 import React, { useContext} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {
-    FaTwitter,
     FaLinkedinIn,
-    FaGithub,
-    FaRedditAlien,
     FaMediumM,
-    FaKaggle
+    FaKaggle,
+    FaGithub,
+    FaAt,
+    FaMapMarkerAlt 
 } from 'react-icons/fa';
-import { FiAtSign } from 'react-icons/fi';
-import { HiOutlineLocationMarker } from 'react-icons/hi';
-
+import { FaDiscord } from "react-icons/fa6"
 import { ThemeContext } from '../../contexts/ThemeContext';
-
 import { socialsData } from '../../data/socialsData';
 import { contactsData } from '../../data/contactsData';
 import './Contacts.css';
@@ -25,12 +22,13 @@ function Contacts() {
         socialIcon: {
             width: '45px',
             height: '45px',
-            borderRadius: '50%',
+            borderRadius: '20%',
+            borderTopLeftRadius: '50%',
+            borderBottomRightRadius: '50%',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             fontSize: '21px',
-            backgroundColor: theme.primary,
             color: theme.secondary,
             transition: '250ms ease-in-out',
             '&:hover': {
@@ -76,7 +74,7 @@ function Contacts() {
                             className='personal-details'
                         >
                             <div className={classes.detailsIcon}>
-                                <FiAtSign />
+                                <FaAt color='#fff' />
                             </div>
                             <p style={{ color: theme.tertiary }}>
                                 {contactsData.email}
@@ -87,7 +85,7 @@ function Contacts() {
                             className='personal-details'
                         >
                             <div className={classes.detailsIcon}>
-                                <FiAtSign />
+                                <FaAt color='#fff' />
                             </div>
                             <p style={{ color: theme.tertiary }}>
                                 {contactsData.mail}
@@ -95,7 +93,7 @@ function Contacts() {
                         </a>
                         <div className='personal-details'>
                             <div className={classes.detailsIcon}>
-                                <HiOutlineLocationMarker />
+                                <FaMapMarkerAlt size={28} color='#fff' />
                             </div>
                             <p style={{ color: theme.tertiary }}>
                                 {contactsData.address}
@@ -109,8 +107,9 @@ function Contacts() {
                                     target='_blank'
                                     rel='noreferrer'
                                     className={classes.socialIcon}
+                                    id='social-gi'
                                 >
-                                    <FaGithub aria-label='GitHub' />
+                                    <FaGithub size={28} color='#fff' aria-label='GitHub' />
                                 </a>
                             )}
                             {socialsData.linkedIn && (
@@ -119,8 +118,9 @@ function Contacts() {
                                     target='_blank'
                                     rel='noreferrer'
                                     className={classes.socialIcon}
+                                    id='social-li'
                                 >
-                                    <FaLinkedinIn aria-label='LinkedIn' />
+                                    <FaLinkedinIn size={28} color='#fff' aria-label='LinkedIn' />
                                 </a>
                             )}
                             {socialsData.kaggle && (
@@ -129,8 +129,9 @@ function Contacts() {
                                     target='_blank'
                                     rel='noreferrer'
                                     className={classes.socialIcon}
+                                    id='social-ka'
                                 >
-                                    <FaKaggle aria-label='Kaggle' />
+                                    <FaKaggle size={28} color='#fff' aria-label='Kaggle' />
                                 </a>
                             )}
                             {socialsData.medium && (
@@ -139,28 +140,20 @@ function Contacts() {
                                     target='_blank'
                                     rel='noreferrer'
                                     className={classes.socialIcon}
+                                    id='social-me'
                                 >
-                                    <FaMediumM aria-label='Medium' />
+                                    <FaMediumM size={28} color='#fff' aria-label='Medium' />
                                 </a>
                             )}
-                            {socialsData.twitter && (
+                            {socialsData.discord && (
                                 <a
-                                    href={socialsData.twitter}
+                                    href={socialsData.discord}
                                     target='_blank'
                                     rel='noreferrer'
                                     className={classes.socialIcon}
+                                    id='social-di'
                                 >
-                                    <FaTwitter aria-label='Twitter' />
-                                </a>
-                            )}
-                            {socialsData.reddit && (
-                                <a
-                                    href={socialsData.reddit}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className={classes.socialIcon}
-                                >
-                                    <FaRedditAlien aria-label='Reddit' />
+                                    <FaDiscord size={28} color='#fff' aria-label='discord' />
                                 </a>
                             )}
                         </div>

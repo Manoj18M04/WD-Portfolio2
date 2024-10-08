@@ -171,6 +171,54 @@
     margin-top: 4rem;
 }
 
+#social-gi {
+    background-color: #333;
+}
+
+#social-li {
+    background-color: #0077B5;
+}
+
+#social-ka {
+    background-color: #27C0FF;
+}
+
+#social-me {
+    background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.6),     /* Red with 80% opacity */
+    rgba(255, 165, 0, 0.6),   /* Orange with 80% opacity */
+    rgba(255, 255, 0, 0.6),   /* Yellow with 80% opacity */
+    rgba(0, 128, 0, 0.6),     /* Green with 80% opacity */
+    rgba(0, 0, 255, 0.6),     /* Blue with 80% opacity */
+    rgba(75, 0, 130, 0.6),    /* Indigo with 80% opacity */
+    rgba(238, 130, 238, 0.6)  /* Violet with 80% opacity */
+  );
+}
+
+#social-di {
+    background-color: #5865F2;
+}
+
+#social-gi:hover {
+    background-color:#6bbf59;
+}
+
+#social-li:hover {
+    background-color:#6bbf59;
+}
+
+#social-ka:hover {
+    background-color:#6bbf59;
+}
+
+#social-me:hover {
+    background-color:#6bbf59;
+}
+
+#social-di:hover {
+    background-color:#6bbf59;
+}
 
 @media (min-width: 992px) and (max-width: 1380px) {
     .contacts--img {
