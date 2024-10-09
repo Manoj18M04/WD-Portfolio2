@@ -78,15 +78,21 @@
   opacity: 0.8;
 }
 
+
 .lcr--content h6 span {
   color: #5da94b;
 }
 
 .lcr--content h1 {
-  font-weight: 600;
+  font-weight: 350;
   font-size: 3.25rem;
   line-height: 110%;
   margin: 1rem 0;
+}
+
+.firstname {
+  color: #5da94b;
+  font-weight: 350;
 }
 
 .lcr--content p {

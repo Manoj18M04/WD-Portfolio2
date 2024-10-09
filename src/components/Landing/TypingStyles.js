@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TextLoop = styled.div`
-  font-weight: 600;
+  font-weight: 450;
   font-size: 1.4rem;
   display: flex;
   overflow: hidden; 
@@ -22,6 +22,5 @@ export const TextLoop = styled.div`
 export const Span = styled.span`
   color: ${({ theme }) => theme.primary};
   cursor: pointer;
-  font-style: italic;
   color: #5da94b;
 `;

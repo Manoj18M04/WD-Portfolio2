@@ -134,8 +134,8 @@ function Landing() {
                         className='lcr--content'
                         style={{ color: theme.tertiary }}
                     >
-                        <h1>{headerData.name}</h1>
-                        <TextLoop>
+                        <h1><b className='firstname'>{headerData.name}</b>{headerData.name2}</h1>
+                        <TextLoop className='loop'>
                             I am  
                             <Span>
                                 <TypewriterComponent
